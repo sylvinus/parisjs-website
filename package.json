@@ -1,16 +1,38 @@
 {
-  "name": "parisjs-website",
-  "description": "The website of parisjs.org",
+  "name": "parisjs",
+  "fullName": "ParisJS",
+  "description": "App for ParisJS",
   "version": "0.0.1",
-  "homepage": "http://parisjs.org/",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/parisjs/parisjs-website.git"
-  },
-  "main": "./utils/meetups.js",
-  "dependencies": {
-      "jsdom": "",
-      "underscore": ""
-  },
-  "devDependencies": {}
+  "joshfire": {
+    "images": {
+      "small": "http://parisjs.org/images/logo.png",
+      "big": "http://parisjs.org/images/logo.png"
+    },
+    "devices": [
+      {
+        "devices": "desktop",
+        "startfile": "index.html",
+        "images": "http://parisjs.org/images/logo.png",
+        "screenshots": "http://parisjs.org/images/logo.png"
+      }
+    ],
+    "options": {
+      "schema": {
+        "name": {
+          "type": "string",
+          "title": "Meetup name"
+        }
+      },
+      "form": [
+        "name",
+        "datasources.main"
+      ]
+    },
+    "datasources": {
+      "main": {
+        "title": "News",
+        "description": "News feed"
+      }
+    }
+  }
 }
